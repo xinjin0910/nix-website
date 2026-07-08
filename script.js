@@ -1,20 +1,11 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.site-nav');
-
-menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('open');
-});
-
-document.querySelectorAll('.site-nav a').forEach(link => {
-  link.addEventListener('click', () => nav.classList.remove('open'));
-});
-
-const revealItems = document.querySelectorAll('.reveal');
-
-const observer = new IntersectionObserver((entries) => {
+const revealItems = document.querySelectorAll(".card, .product-card, .why-grid div, .spec-item");
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
+    if (entry.isIntersecting) entry.target.classList.add("show");
   });
-}, { threshold: 0.16 });
+}, { threshold: 0.12 });
 
-revealItems.forEach(item => observer.observe(item));
+revealItems.forEach(item => {
+  item.classList.add("reveal");
+  observer.observe(item);
+});
