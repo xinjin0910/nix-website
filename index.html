@@ -21,7 +21,7 @@
       <a href="#about">About</a>
       <a href="mailto:sales@nixtechnical.com">Contact</a>
     </nav>
-    <a class="header-button" href="mailto:sales@nixtechnical.com">Request a Quote</a>
+    <button class="header-button js-project-dialog" type="button">Discuss Your Project</button>
   </header>
 
   <main id="top">
@@ -34,8 +34,8 @@
           <p>We help companies turn ideas into reliable products with clear communication and lasting partnerships.</p>
         </div>
         <div class="hero-actions">
-          <a class="button primary" href="mailto:sales@nixtechnical.com">Request a Quote</a>
-          <a class="button secondary" href="mailto:sales@nixtechnical.com?subject=Discuss%20Your%20Project">Discuss Your Project</a>
+          <button class="button primary js-project-dialog" type="button">Discuss Your Project</button>
+          <p class="response-note">Our engineering team will reach out to you shortly.</p>
         </div>
         <div class="process-line"><span>Concept</span><b>→</b><span>CAD</span><b>→</b><span>Prototype</span><b>→</b><span>Production</span></div>
       </div>
@@ -144,6 +144,25 @@
     </div>
     <div class="footer-links"><a href="mailto:sales@nixtechnical.com">sales@nixtechnical.com</a><a href="tel:+12482270321">+1 248 227 0321</a><span>Shelby Township, MI, USA</span><a href="#">LinkedIn</a></div>
   </footer>
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+    <button class="dialog-close" type="button" aria-label="Close form">×</button>
+    <p class="eyebrow">Start a Conversation</p>
+    <h2 id="project-dialog-title">Discuss Your Project</h2>
+    <p class="dialog-intro">Tell us how to reach you. Our engineering team will follow up shortly.</p>
+    <form class="project-form" id="project-form" action="https://formsubmit.co/ajax/sales@nixtechnical.com" method="POST">
+      <input type="hidden" name="_subject" value="New project inquiry from NIX website">
+      <input type="hidden" name="_template" value="table">
+      <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+      <div class="form-row">
+        <label>First Name<input type="text" name="First Name" autocomplete="given-name" required></label>
+        <label>Last Name<input type="text" name="Last Name" autocomplete="family-name" required></label>
+      </div>
+      <label>Company Name<input type="text" name="Company Name" autocomplete="organization" required></label>
+      <label>Email<input type="email" name="email" autocomplete="email" required></label>
+      <button class="button primary form-submit" type="submit">Submit</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
   <script src="script.js"></script>
 </body>
 </html>
