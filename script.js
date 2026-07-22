@@ -1,4 +1,4 @@
-const revealItems = document.querySelectorAll(".card, .product-card, .why-grid div, .spec-item");
+const revealItems = document.querySelectorAll(".card, .product-card, .how-step, .spec-item");
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add("show");
