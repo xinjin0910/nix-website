@@ -17,7 +17,7 @@ if (document.querySelector(".js-project-dialog") && !document.querySelector("#pr
       <p class="eyebrow">Start a Conversation</p>
       <h2 id="project-dialog-title">Discuss Your Project</h2>
       <p class="dialog-intro">Tell us how to reach you. Our engineering team will follow up shortly.</p>
-      <form class="project-form" id="project-form" action="https://formsubmit.co/ajax/sales@nixtechnical.com" method="POST">
+      <form class="project-form" id="project-form" action="https://formsubmit.co/ajax/info@nixtechnical.com" method="POST">
         <input type="hidden" name="_subject" value="New project inquiry from NIX website">
         <input type="hidden" name="_template" value="table">
         <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
@@ -68,7 +68,7 @@ if (projectDialog && projectForm) {
       status.textContent = "Thank you. Our engineering team will reach out shortly.";
     } catch (error) {
       status.className = "form-status error";
-      status.textContent = "We could not send your request. Please email sales@nixtechnical.com.";
+      status.textContent = "We could not send your request. Please email info@nixtechnical.com.";
     } finally {
       submitButton.disabled = false;
     }
